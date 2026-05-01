@@ -1,0 +1,75 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: pulseops-api-gateway
+  namespace: observability
+  labels:
+    app.kubernetes.io/part-of: pulseops
+spec:
+  namespaceSelector:
+    matchNames:
+      - pulseops
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: api-gateway
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: pulseops-announcement-service
+  namespace: observability
+  labels:
+    app.kubernetes.io/part-of: pulseops
+spec:
+  namespaceSelector:
+    matchNames:
+      - pulseops
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: announcement-service
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: pulseops-media-service
+  namespace: observability
+  labels:
+    app.kubernetes.io/part-of: pulseops
+spec:
+  namespaceSelector:
+    matchNames:
+      - pulseops
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: media-service
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: pulseops-notification-service
+  namespace: observability
+  labels:
+    app.kubernetes.io/part-of: pulseops
+spec:
+  namespaceSelector:
+    matchNames:
+      - pulseops
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: notification-service
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s
