@@ -105,7 +105,7 @@ kubectl -n pulseops rollout status deployment/api-gateway
 - `HorizontalPodAutoscaler`: scales the API Gateway between 2 and 5 replicas based on CPU.
 - `Kustomize`: separates reusable base manifests from local-only patches.
 
-## Roadmap (PRD milestones)
+## Roadmap
 
 1. **Week 1** — Services + Compose *(done)*  
 2. **Week 2** — k3d, Kubernetes manifests, Postgres in-cluster *(done)*  
@@ -113,8 +113,3 @@ kubectl -n pulseops rollout status deployment/api-gateway
 4. **Week 4** — OpenTelemetry collector + Tempo/Jaeger, GitHub Actions  
 5. **Week 5** — k6, HPA, failure drills, README screenshots  
 
----
-
-### Resume bullet (target when complete)
-
-Built a production-style Kubernetes platform for four microservices with Terraform, GitHub Actions, Prometheus, Grafana, and OpenTelemetry, enabling automated deployments, p95 latency tracking, distributed tracing, and sub-30s pod recovery under simulated load.
