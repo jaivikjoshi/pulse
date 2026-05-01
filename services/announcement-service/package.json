@@ -1,0 +1,24 @@
+{
+  "name": "@pulseops/announcement-service",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "node --watch --import tsx src/index.ts",
+    "lint": "eslint src --ext .ts || true",
+    "test": "node --test || true"
+  },
+  "dependencies": {
+    "fastify": "^4.28.1",
+    "pg": "^8.12.0",
+    "prom-client": "^15.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/pg": "^8.11.6",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
+  }
+}

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pulseops-config
+  namespace: pulseops
+data:
+  NODE_ENV: production
+  API_GATEWAY_PORT: "8080"
+  ANNOUNCEMENT_SERVICE_URL: http://announcement-service:8080
+  MEDIA_SERVICE_URL: http://media-service:8080
+  NOTIFICATION_SERVICE_URL: http://notification-service:8080
+  FAILURE_RATE_PERCENT: "0"

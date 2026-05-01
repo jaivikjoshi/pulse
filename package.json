@@ -1,0 +1,11 @@
+{
+  "name": "pulseops",
+  "private": true,
+  "description": "PulseOps monorepo (run npm install inside each service for Docker)",
+  "scripts": {
+    "build": "npm run build --prefix services/api-gateway && npm run build --prefix services/announcement-service && npm run build --prefix services/media-service && npm run build --prefix services/notification-service"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
